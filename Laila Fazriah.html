@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Hai Laila Fazriah ♡</title>
+
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+
+        body {
+            background: #f8f5f2;
+            color: #292525;
+            font-family: Georgia, serif;
+            overflow-x: hidden;
+        }
+
+
+        /* =========================
+           OPENING
+        ========================= */
+
+        .opening {
+
+            min-height: 100vh;
+
+            display: flex;
+            flex-direction: column;
+
+            justify-content: center;
+            align-items: center;
+
+            text-align: center;
+
+            padding: 30px;
+
+            position: relative;
+
+        }
+
+
+        .opening p {
+
+            font-family: Arial, sans-serif;
+
+            font-size: 12px;
+
+            letter-spacing: 5px;
+
+            text-transform: uppercase;
+
+            color: #9b8f8f;
+
+            margin-bottom: 25px;
+
+        }
+
+
+        .opening h1 {
+
+            font-size: clamp(45px, 9vw, 90px);
+
+            font-weight: normal;
+
+            line-height: 1;
+
+        }
+
+
+        .opening h1 span {
+
+            font-style: italic;
+
+            color: #a56b72;
+
+        }
+
+
+        /* =========================
+           MUSIC BUTTON
+        ========================= */
+
+        .music-btn {
+
+            margin-top: 35px;
+
+            background: none;
+
+            border: none;
+
+            border-bottom: 1px solid #aaa;
+
+            padding: 8px 0;
+
+            color: #777;
+
+            font-family: Arial, sans-serif;
+
+            font-size: 11px;
+
+            letter-spacing: 2px;
+
+            cursor: pointer;
+
+            transition: 0.3s;
+
+        }
+
+
+        .music-btn:hover {
+
+            color: #a56b72;
+
+            border-color: #a56b72;
+
+        }
+
+
+        /* =========================
+           SCROLL
+        ========================= */
+
+        .scroll {
+
+            position: absolute;
+
+            bottom: 35px;
+
+            font-family: Arial, sans-serif;
+
+            font-size: 11px;
+
+            letter-spacing: 3px;
+
+            color: #aaa;
+
+            animation: floating 2s infinite;
+
+        }
+
+
+        @keyframes floating {
+
+            0%, 100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(8px);
+            }
+
+        }
+
+
+        /* =========================
+           CONTENT
+        ========================= */
+
+        .content {
+
+            max-width: 900px;
+
+            margin: auto;
+
+            padding: 100px 30px;
+
+        }
+
+
+        /* =========================
+           TEXT
+        ========================= */
+
+        .text {
+
+            max-width: 600px;
+
+            margin: 150px auto;
+
+            text-align: center;
+
+        }
+
+
+        .text p {
+
+            font-size: 22px;
+
+            line-height: 1.8;
+
+        }
+
+
+        .small-text {
+
+            font-family: Arial, sans-serif;
+
+            font-size: 12px !important;
+
+            letter-spacing: 2px;
+
+            color: #a56b72;
+
+            margin-bottom: 20px;
+
+        }
+
+
+        /* =========================
+           PHOTO
+        ========================= */
+
+        .photo {
+
+            margin: 160px auto;
+
+            width: min(85%, 600px);
+
+            opacity: 0;
+
+            transform: translateY(80px);
+
+            transition:
+
+                opacity 1.2s ease,
+
+                transform 1.2s ease;
+
+        }
+
+
+        .photo.show {
+
+            opacity: 1;
+
+            transform: translateY(0);
+
+        }
+
+
+        .photo img {
+
+            width: 100%;
+
+            display: block;
+
+            border-radius: 2px;
+
+        }
+
+
+        .caption {
+
+            text-align: center;
+
+            margin-top: 20px;
+
+            font-size: 16px;
+
+            font-style: italic;
+
+            color: #756c6c;
+
+        }
+
+
+        /* =========================
+           BIG PHOTO
+        ========================= */
+
+        .big-photo {
+
+            width: 100%;
+
+            margin: 200px 0;
+
+            opacity: 0;
+
+            transform: translateY(80px);
+
+            transition:
+
+                opacity 1.2s ease,
+
+                transform 1.2s ease;
+
+        }
+
+
+        .big-photo.show {
+
+            opacity: 1;
+
+            transform: translateY(0);
+
+        }
+
+
+        .big-photo img {
+
+            width: 100%;
+
+            max-height: 750px;
+
+            object-fit: cover;
+
+            display: block;
+
+        }
+
+
+        /* =========================
+           ENDING
+        ========================= */
+
+        .ending {
+
+            min-height: 100vh;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            text-align: center;
+
+            padding: 40px;
+
+        }
+
+
+        .ending h2 {
+
+            font-size: clamp(35px, 7vw, 65px);
+
+            font-weight: normal;
+
+            line-height: 1.2;
+
+        }
+
+
+        .ending h2 span {
+
+            color: #a56b72;
+
+            font-style: italic;
+
+        }
+
+
+        .heart {
+
+            margin-top: 35px;
+
+            font-size: 25px;
+
+            animation: heartbeat 1.5s infinite;
+
+        }
+
+
+        @keyframes heartbeat {
+
+            0%, 100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.15);
+            }
+
+        }
+        
+.ending button {
+    margin-top: 30px;
+
+    background: linear-gradient(135deg, #a56b72, #c4878e);
+    color: white;
+
+    border: none;
+    padding: 14px 30px;
+    border-radius: 50px;
+
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+
+    cursor: pointer;
+
+    box-shadow: 0 8px 20px rgba(165, 107, 114, 0.25);
+
+    transition: 
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.ending button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 25px rgba(165, 107, 114, 0.35);
+}
+
+.ending button:active {
+    transform: scale(0.96);
+}
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 600px) {
+
+            .content {
+
+                padding: 60px 20px;
+
+            }
+
+
+            .text {
+
+                margin: 100px auto;
+
+            }
+
+
+            .text p {
+
+                font-size: 19px;
+
+            }
+
+
+            .photo {
+
+                width: 92%;
+
+                margin: 120px auto;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         MUSIC
+    ========================= -->
+
+    <audio id="music" loop>
+
+        <source src="HIVI-Siapkah Kau Jatuh Cinta Lagi.mp3" type="audio/mpeg">
+
+    </audio>
+
+
+
+    <!-- =========================
+         OPENING
+    ========================= -->
+
+    <section class="opening">
+
+
+        <p>
+            something for you
+        </p>
+
+
+        <h1>
+            For <span>you.</span>
+        </h1>
+
+
+        <button
+            class="music-btn"
+            onclick="startMusic()">
+
+            ♫ PLAY MUSIC
+
+        </button>
+
+
+        <div class="scroll">
+
+            SCROLL ↓
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =========================
+         CONTENT
+    ========================= -->
+
+    <main class="content">
+
+
+        <!-- TEXT 1 -->
+
+        <div class="text reveal">
+
+            <p class="small-text">
+
+                I don't know how to say this...
+
+            </p>
+
+
+            <p>
+
+                Jadi aku pikir, mungkin lebih gampang
+                kalo aku ngomong ini lewat sesuatu
+                yang aku buat sendiri. Sebenernya di bantu ai sih..
+
+            </p>
+
+        </div>
+
+
+
+        <!-- FOTO 1 -->
+
+        <div class="photo reveal">
+
+            <img
+                src="photobooth zaky laila.jpeg"
+                alt="Foto pertama">
+
+
+            <p class="caption">
+
+                salah satu momen yang paling aku suka (Karna Pertama kali)
+
+            </p>
+
+        </div>
+
+
+
+        <!-- TEXT 2 -->
+
+        <div class="text reveal">
+
+            <p>
+
+                Jujur aku nggak tau kapan tepatnya rasa ini muncul,
+                tapi sejak kamu ada,
+                hari-hari  aku tuh rasanya lebih menyenangkan.
+                (agak alay, tapi lv u bb🫰)
+
+            </p>
+
+        </div>
+
+
+
+        <!-- FOTO 2 -->
+
+        <div class="photo reveal">
+
+            <img
+                src="PU nih boss.jpeg"
+                alt="Foto kedua">
+
+
+            <p class="caption">
+
+                gatau kenapa ya,
+                aku suka bngt sama foto ini..
+
+            </p>
+
+        </div>
+
+
+
+        <!-- FOTO 3 BESAR -->
+
+        <div class="big-photo reveal">
+
+            <img
+                src="setara itb unpad.jpeg"
+                alt="Foto ketiga">
+        <div class="text reveal">
+            <p class="small-text">
+            Jujur setara ITBxUNPAD
+            </p>
+        </div>
+        
+
+        </div>
+
+
+
+        <!-- TEXT 3 -->
+
+        <div class="text reveal">
+
+            <p>
+
+                Sebenernya bisa aja aku
+                ngomong semuanya secara langsung.
+                Cuma biar keliatan keren aja bikin ginian wkwk
+
+                Tapi.. satu hal yang harus kamu tau...
+
+            </p>
+
+        </div>
+
+
+    </main>
+
+
+
+    <!-- =========================
+         ENDING
+    ========================= -->
+
+    <section class="ending reveal">
+
+
+        <div>
+
+            <h2>
+
+                I'm really glad<br>
+
+                I found <span>you.</span>
+
+            </h2>
+
+            <h2>
+                Kamu Mau Jadi <span>Pacar</span>  Aku?
+            </h2>
+            <div class="heart">
+
+                ♡
+
+            </div>
+        
+            <button id="waButton" onclick="kirimWA()">
+             Iya, aku mau ❤️
+            </button>
+
+            <script>
+function kirimWA() {
+
+    const tanggal = new Date().toLocaleDateString("id-ID", {
+        day: "numeric",
+        month: "long",
+        year: "numeric"
+    });
+
+    const pesan = "Iya aku mau jadi pacar kamu ❤️\nTanggal: " + tanggal;
+
+    const nomor = "628980863227";
+
+    const linkWA =
+        "https://api.whatsapp.com/send/?phone=" +
+        nomor +
+        "&text=" +
+        encodeURIComponent(pesan) +
+        "&type=phone_number&app_absent=0";
+
+    window.location.href = linkWA;
+}
+</script>
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================= -->
+
+    <script>
+
+
+        /* =========================
+           MUSIC
+        ========================= */
+
+        function startMusic() {
+
+            const music =
+                document.getElementById("music");
+
+
+            music.volume = 0.35;
+
+
+            music.play();
+
+
+            document.querySelector(
+                ".music-btn"
+            ).textContent = "♫ MUSIC PLAYING";
+
+        }
+
+
+
+        /* =========================
+           SCROLL REVEAL
+        ========================= */
+
+        const reveals =
+            document.querySelectorAll(".reveal");
+
+
+        const observer =
+            new IntersectionObserver(
+
+                (entries) => {
+
+                    entries.forEach((entry) => {
+
+                        if (entry.isIntersecting) {
+
+                            entry.target.classList.add("show");
+
+                        }
+
+                    });
+
+                },
+
+                {
+                    threshold: 0.15
+                }
+
+            );
+
+
+        reveals.forEach((element) => {
+
+            observer.observe(element);
+
+        });
+
+
+    </script>
+    
+
+</body>
+
+</html>
+
